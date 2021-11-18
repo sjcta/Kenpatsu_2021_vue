@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="106" height="106" viewBox="0 0 106 106">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="椭圆_297" data-name="椭圆 297" cx="53" cy="53" r="53" transform="translate(0.197 0.197)" fill="#3084b5"/>
+    </clipPath>
+  </defs>
+  <g id="蒙版组_58" data-name="蒙版组 58" transform="translate(-0.197 -0.197)" clip-path="url(#clip-path)">
+    <g id="组_587" data-name="组 587" transform="translate(16.926 23.117)">
+      <g id="组_586" data-name="组 586" transform="translate(0 0)">
+        <ellipse id="椭圆_296" data-name="椭圆 296" cx="19.486" cy="19.486" rx="19.486" ry="19.486" transform="translate(16.622 0)" fill="#fff"/>
+        <path id="路径_604" data-name="路径 604" d="M-1707.237-1654.784v-10.388a22.566,22.566,0,0,0-22.566-22.565h-27.366a22.566,22.566,0,0,0-22.569,22.565v10.388Z" transform="translate(1779.738 1739.316)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

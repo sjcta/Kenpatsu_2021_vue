@@ -1,0 +1,239 @@
+[
+    {
+        "id": "A",
+        "name": "SIB Creation",
+        "board": [
+            {
+                "sn": "1-1",
+                "type": "Digital Smart City",
+                "title": "GRACEW platform to optimize digital city area and building",
+                "panel": "/image/board/details/journal_A.png",
+                "detail": [
+                    {
+                        "title": "Demo1",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": ""
+                    },{
+                        "title": "Demo2",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#1"
+                    },{
+                        "title": "Demo3",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": "#2"
+                    },{
+                        "title": "Demo4",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#3"
+                    }
+                ]
+            },{
+                "sn": "1-2",
+                "type": "Digital Smart City",
+                "title": "GRACEW platform to optimize digital city area and building",
+                "panel": "/image/board/details/journal_A.png",
+                "detail": [
+                    {
+                        "title": "Demo1",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": ""
+                    },{
+                        "title": "Demo2",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#1"
+                    },{
+                        "title": "Demo3",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": "#2"
+                    },{
+                        "title": "Demo4",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#3"
+                    }
+                ]
+            },{
+                "sn": "1-3",
+                "type": "Digital Smart City",
+                "title": "GRACEW platform to optimize digital city area and building",
+                "panel": "/image/board/details/journal_A.png",
+                "detail": [
+                    {
+                        "title": "Demo1",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": ""
+                    },{
+                        "title": "Demo2",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#1"
+                    },{
+                        "title": "Demo3",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": "#2"
+                    },{
+                        "title": "Demo4",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#3"
+                    }
+                ]
+            },{
+                "sn": "1-4",
+                "type": "Digital Smart City",
+                "title": "GRACEW platform to optimize digital city area and building",
+                "panel": "/image/board/details/journal_A.png",
+                "detail": [
+                    {
+                        "title": "Demo1",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": ""
+                    },{
+                        "title": "Demo2",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#1"
+                    },{
+                        "title": "Demo3",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": "#2"
+                    },{
+                        "title": "Demo4",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#3"
+                    }
+                ]
+            }
+        ]
+    },{
+        "id": "B",
+        "name": "SIB Creation",
+        "board": [
+            {
+                "sn": "2-1",
+                "type": "Digital Smart City",
+                "title": "GRACEW platform to optimize digital city area and building",
+                "panel": "/image/board/details/journal_A.png",
+                "detail": [
+                    {
+                        "title": "Demo1",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": ""
+                    },{
+                        "title": "Demo2",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#1"
+                    },{
+                        "title": "Demo3",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": "#2"
+                    },{
+                        "title": "Demo4",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#3"
+                    }
+                ]
+            },{
+                "sn": "2-2",
+                "type": "Digital Smart City",
+                "title": "GRACEW platform to optimize digital city area and building",
+                "panel": "/image/board/details/journal_A.png",
+                "detail": [
+                    {
+                        "title": "Demo1",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": ""
+                    },{
+                        "title": "Demo2",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#1"
+                    },{
+                        "title": "Demo3",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": "#2"
+                    },{
+                        "title": "Demo4",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#3"
+                    }
+                ]
+            },{
+                "sn": "2-3",
+                "type": "Digital Smart City",
+                "title": "GRACEW platform to optimize digital city area and building",
+                "panel": "/image/board/details/journal_A.png",
+                "detail": [
+                    {
+                        "title": "Demo1",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": ""
+                    },{
+                        "title": "Demo2",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#1"
+                    },{
+                        "title": "Demo3",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": "#2"
+                    },{
+                        "title": "Demo4",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#3"
+                    }
+                ]
+            },{
+                "sn": "2-4",
+                "type": "Digital Smart City",
+                "title": "GRACEW platform to optimize digital city area and building",
+                "panel": "/image/board/details/journal_A.png",
+                "detail": [
+                    {
+                        "title": "Demo1",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": ""
+                    },{
+                        "title": "Demo2",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#1"
+                    },{
+                        "title": "Demo3",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "",
+                        "link": "#2"
+                    },{
+                        "title": "Demo4",
+                        "desc": "Hitachi is working in co-creation with a wide range of stakeholders to accelerate innovation",
+                        "img": "/image/board/details/video.png",
+                        "link": "#3"
+                    }
+                ]
+            }
+        ]
+    }
+]
