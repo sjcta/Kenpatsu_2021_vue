@@ -20,6 +20,11 @@ export default{
 
 <style>
 
+#app {
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
 
 /* 公共样式 */
 html,body{
