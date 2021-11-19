@@ -485,6 +485,8 @@ export default {
         transform: translateY(0);
         -webkit-transform: translateY(0);
         -webkit-backdrop-filter: blur(15px);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
     }
     #naviArea .nav a {
         display: flex;
