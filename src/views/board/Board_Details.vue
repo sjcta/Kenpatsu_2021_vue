@@ -1,7 +1,7 @@
 <template>
     <div id="details" :class="'type' + boardType">
         <HeadBar current="message"></HeadBar>
-        <div id ="mainArea">
+        <div id ="mainArea" :class="{'lock': showChatWindow}">
             <chat-window :class="{'active':showChatWindow}"></chat-window>
 
             <div class="articleHead">
@@ -17,11 +17,9 @@
 
                     <div class="tools">
                         <div class="audioPlayer"></div>
-                        <div class="button comment" @click="showChatWindow=!showChatWindow"><span>评论</span></div>
-                        <a href="/board/" class="button return">
-                            <img src="/assets/image/board/details/return.png" alt="">
-                        </a>
-
+                        <div class="button comment" 
+                            :class="{'close':showChatWindow}" 
+                            @click="showChatWindow=!showChatWindow"><span>评论</span></div>
                     </div>  
                 </div>
             </div>
@@ -160,7 +158,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 
 
 /*----------------- 详情页 ---------------------*/
@@ -175,6 +173,7 @@ export default {
     height: 100%;
     
 }
+
 #details #mainArea .articleHead{
     position: relative;
     width: 100%;
@@ -187,7 +186,7 @@ export default {
 #details.typeB #mainArea .articleHead{
     background-image:linear-gradient(to right,#327AAD,#6ABCF5);
 }
-#details #mainArea .articleHead .titleArea{
+#details .titleArea{
     width: 100%;
     height: 100%;
     max-width: 1280px;
@@ -202,16 +201,18 @@ export default {
 #details #particles {
     position: absolute;
     height: 100%;
+    top: 0;
+    width: 100%;
     z-index: -1;
     opacity: .5;
 }
-#details #mainArea .articleHead .titleArea .title{
+#details .titleArea .title{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
 }
-#details #mainArea .articleHead .titleArea .title .number{
+#details .titleArea .title .number{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -220,52 +221,54 @@ export default {
     font-size: 30px;
     min-width: 60px;
 }
-#details #mainArea .articleHead .titleArea .title .number::before {
+#details .titleArea .title .number::before {
     font-size: 70px;
     font-weight: 600;
     line-height: 1;
 }
-#details.typeA #mainArea .articleHead .titleArea .title .number::before {
+#details.typeA .titleArea .title .number::before {
     content: "A";
 }
-#details.typeB #mainArea .articleHead .titleArea .title .number::before {
+#details.typeB .titleArea .title .number::before {
     content: "B";
 }
 
-#details #mainArea .articleHead .titleArea .title h1{
+#details .titleArea .title h1{
     display: flex;
     flex-direction: column;
     color: #FFF;
     margin: 0 0 20px 40px;
     flex-wrap: wrap;
 }
-#details #mainArea .articleHead .titleArea .title h1 span{
+#details .titleArea .title h1 span{
     font-size: 20px;
     font-family: "Times New Roman";
 }
-#details #mainArea .articleHead .titleArea .title h1 p{
+#details .titleArea .title h1 p{
     font-size: 45px;
     font-weight: 600;
     font-family: "Times New Roman";
 }
 
 
-#details #mainArea .articleHead .titleArea .tools{
+#details .titleArea > .tools{
     display: flex;
     margin-top: 10px;
+    position: relative;
+    z-index: 1;
 }
 
-#details #mainArea .articleHead .titleArea .tools .audioPlayer{
+#details .titleArea > .tools .audioPlayer{
     width: 100%;
     min-width: 350px;
     height: 40px;
     background: rgba(0, 0, 0, .2);
     border-radius: 30px;
 }
-#details #mainArea .articleHead .titleArea .tools .button.return{
-    display: none;
+#details .titleArea > .tools .button.comment.close::before {
+    background: url("../../assets/image/speech/close_light.svg") center center no-repeat;
+    background-size: 70%;
 }
-
 
 
 #details #mainArea .journal{
@@ -309,7 +312,7 @@ export default {
     margin-bottom: 50px;
 }
 #details #mainArea .data ul li.pdf a{
-    background: #D1D5DA url("/assets/image/board/details/pdf_img.png") no-repeat center center;
+    background: #D1D5DA url("../../assets/image/board/details/pdf_img.png") no-repeat center center;
     background-size: 50%;
 }
 #details #mainArea .data ul li:last-child{
@@ -341,7 +344,7 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: url("/assets/image/board/details/play.svg") center center no-repeat;
+    background: url("../../assets/image/board/details/play.svg") center center no-repeat;
     display: block;
     width: 20%;
     height: 20%;
@@ -367,14 +370,16 @@ export default {
 }
 
 #details #mainArea .data ul li p{
-    font-size: 18px;
-    color: #6C6C6C;
-    font-family: "Arial";
+    font-size: 14px;
+    color: #666;
 }
 
 #details .chatWindow {
-    padding: 60px 30px;
+    padding: 90px 30px 90px;
 }
+
+
+
 
 @media screen and (max-width: 1280px){
     #details #mainArea .data ul li{
@@ -396,92 +401,46 @@ export default {
         flex-wrap: wrap;
         height: auto;
     }
-    #details #mainArea .articleHead .titleArea .title{
+    #details .titleArea .title{
         width: 100%;
         display: flex;
         justify-content: space-between;
         padding-top: 50px;
     }
 
-    #details #mainArea .articleHead .titleArea .title .number{
+    #details .titleArea .title .number{
         order: 1;
     }
-    #details #mainArea .articleHead .titleArea .title h1{
+    #details .titleArea .title h1{
         margin-left: 0;
     }
-    #details #mainArea .articleHead .titleArea .title h1 span{
+    #details .titleArea .title h1 span{
         width: 90%;
         margin-bottom: 5px;
     }
-    #details #mainArea .articleHead .titleArea .title h1 p{
+    #details .titleArea .title h1 p{
         width: 90%;
         font-size: 37px;
     }
-    #details #mainArea .articleHead .titleArea .tools{
+    #details .titleArea .tools{
         margin-top: 0;
         width: 100%;
     }
-    #details #mainArea .articleHead .titleArea .tools .button.comment {
+    #details .titleArea .tools .button.comment {
         display: none;
     }
 
-    
-    #details #naviArea .tools .button.comment {
-        display: block;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
+    #details #naviArea .tools {
         display: flex;
-        align-items: center;
-        justify-content: center;
     }
-    #details #naviArea .tools .button.comment span{
+    
+    #details .chatWindow .chatWindowTitle i.icon.close {
         display: none;
     }
-    #details #naviArea .tools .button.comment::before {
-        width: 50%;
-        height: 50%;
-    }
 
 
-    #details #naviArea > .tools {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        left: 0;
-        padding: 0 30px;
-        box-sizing: border-box;
-        bottom: -80px;
-    }
     
-    #details #naviArea .tools .button {
-        display: block;
-        width: 60px;
-        height: 60px;
-        margin: 0;
-        background-color: rgba(0, 0, 0, .2);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        box-shadow: 0 0 50px rgba(0, 0, 0, .1);
-    }
-    #details #naviArea .tools .button.comment {
-        display: flex;
-        order:2;
-    }
-    #details #naviArea .tools .button.return {
-        display: block;
-        position: absolute;
-        top: 27px;
-        left: 30px;
-        width: 40px;
-        height: 0;
-        order:1;
-        background: url("/assets/image/board/details/return.png") no-repeat;
-    }
-    #details #naviArea .tools .button.return img{
-        width: 100%;
-    }
+   
 }
 
 @media screen and (max-width: 800px){
@@ -494,12 +453,18 @@ export default {
 
 
 @media screen and (max-width: 720px){
+    
+#details #mainArea.lock {
+    height: 100vh;
+    overflow:hidden;
+}
+
     #details #mainArea .journal div{
         height: 100vw;
         overflow-x: auto;
         overflow-y: hidden;
     }
-    #details #mainArea .articleHead .titleArea{
+    #details .titleArea{
         padding: 0 15px;
     }
     #details #mainArea .journal div img{
@@ -512,25 +477,27 @@ export default {
         margin-right: 0px;
     }
 
-    #details #mainArea .articleHead .titleArea .title {
+    #details .titleArea .title {
         padding-top: 60px;
     }
-    #details #mainArea .articleHead .titleArea .title h1 p {
+    #details .titleArea .title h1 p {
         font-size: 30px;
     }
-    #details #mainArea .articleHead .titleArea .title .number::before{
+    #details .titleArea .title .number::before{
         font-size: 60px;
     }
-    #details #mainArea .articleHead .titleArea .title .number {
+    #details .titleArea .title .number {
         font-size: 25px;
     }
     
     #details #naviArea > .tools {
+        position: absolute;
+        z-index: -1;
         padding: 0 15px;
         bottom: -65px;
     }
     #details #naviArea .tools .button {
-        display: block;
+        display: flex;
         width: 50px;
         height: 50px;
     }
@@ -538,20 +505,20 @@ export default {
 
 @media screen and (max-width: 540px){
     /*------ 详情页 ------*/
-    #details #mainArea .articleHead .titleArea{
+    #details .titleArea{
         padding: 0 15px;
     }
-    #details #mainArea .articleHead .titleArea .tools .btnAudio{
+    #details .titleArea .tools .btnAudio{
         margin-top: 20px;
     }
-    #details #mainArea .articleHead .titleArea .title h1 span{
+    #details .titleArea .title h1 span{
         font-size: 16px;
     }
-    #details #mainArea .articleHead .titleArea .title h1 p {
+    #details .titleArea .title h1 p {
         font-size: 24px;
     }
     
-    #details #mainArea .articleHead .titleArea .title .number span{
+    #details .titleArea .title .number span{
         font-size: 20px;
     }
 

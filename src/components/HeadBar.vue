@@ -1,5 +1,5 @@
 <template>
-    <div id="naviArea">
+    <div id="naviArea" ref="naviArea" :class="{'hidden': hideNavi}">
         <div class="logo">
                 <img src="@/assets/image/navi/logo.svg" alt="">
         </div>
@@ -28,6 +28,11 @@
         <div id="agendaButton" v-if="showAgendaButton" :class="{'active': showAgenda}" @click="agendaChange">
             <i class="icon agenda"></i><span>Agenda</span>
         </div>
+
+        <div class="tools">
+                <div class="button comment" @click="showChatWindow" :class="{'close':this.$parent.showChatWindow}"></div>
+                <a href="/board/" class="button return"></a>
+        </div>
     </div>
 </template>
 
@@ -38,15 +43,36 @@ export default {
         return{
             navlist:["Home","Speech","Board","Message"],
             currentLang: 'cn',
-            showAgenda: false
+            showAgenda: false,
+            hideNavi: false,
+            naviHeight: 50
         }
     },
+    created () {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    destroyed () {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
     mounted() {
+        this.naviHeight = this.$refs.naviArea.offsetHeight;
     },
     methods: {
+        handleScroll (event) {
+
+            //console.log(window.pageYOffset, this.naviHeight)
+            if(window.pageYOffset > this.naviHeight && window.innerWidth <= 720) {
+                this.hideNavi = true;
+            }else{
+                this.hideNavi = false;
+            }
+        },
         agendaChange () {
             this.showAgenda = !this.showAgenda;
             this.$emit('showAgenda', this.showAgenda);
+        },
+        showChatWindow () {
+            this.$parent.showChatWindow = !this.$parent.showChatWindow;
         }
     },
 }
@@ -167,7 +193,6 @@ export default {
     opacity: 1;
 }
 
-
 #naviArea .language{
     display: flex;
     align-items: center;
@@ -177,11 +202,11 @@ export default {
     display: flex;
 }
 
-#naviArea .language p a.router-link-active,
+#naviArea .language p a.active,
 #naviArea .language p a.hover{
     color: #FFF;
 }
-#naviArea .language p a.router-link-active span,
+#naviArea .language p a.active span,
 #naviArea .language p a.hover span{
     color: #FFF;
 }
@@ -217,6 +242,8 @@ export default {
 #naviArea .language p a:last-child::after{
     display: none;
 }
+
+
 #naviArea .language>a.login{
     width: 38px;
     height: 38px;
@@ -290,6 +317,15 @@ export default {
     display: none;
 }
 
+#naviArea .tools {
+    display: none;
+}
+
+#naviArea .tools .button.comment.close::before {
+    background: url("../assets/image/speech/close_light.svg") center center no-repeat;
+    background-size: 80%;
+}
+
 
 @media screen and (max-width: 1200px){
     #agendaButton {
@@ -329,7 +365,7 @@ export default {
         font-size: 11px;
         margin: 0 5px;
     }
-    #naviArea .language p{
+#naviArea .language p{
         font-size: 13px;
     }
     #naviArea .language p span{
@@ -341,6 +377,8 @@ export default {
     #naviArea .language p a span{
         display: none;
     }
+
+
     #naviArea .language>a.login{
         width: 33px;
         height: 33px;
@@ -349,6 +387,58 @@ export default {
     #naviArea .language > a.login img{
         width: 100%;
         margin-left: 1px;  
+    }
+
+
+
+    #naviArea .tools {
+        position: absolute;
+        display: none;
+        justify-content: space-between;
+        width: 100%;
+        left: 0;
+        padding: 0 30px;
+        box-sizing: border-box;
+        bottom: -80px;
+    }
+    
+
+    #naviArea .tools .button {
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        background-color: rgba(0, 0, 0, .2);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        box-shadow: 0 0 50px rgba(0, 0, 0, .1);
+    }
+
+
+    #naviArea .tools .button:hover {
+        box-shadow: 0 0 20px rgba(255, 255, 255, .9);
+    }
+
+    #naviArea .tools .button.comment span{
+        display: none;
+    }
+    #naviArea .tools .button.comment::before {
+        width: 50%;
+        height: 50%;
+    }
+
+    #naviArea .tools .button.comment {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        order:2;
+    }
+    #naviArea .tools .button.return {
+        order:1;
     }
 
 }
@@ -371,7 +461,6 @@ export default {
 
 
 @media screen and (max-width: 720px){
-
     #naviArea {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     }
@@ -383,7 +472,7 @@ export default {
         right: 0;
         height: auto;
         min-height: 60px;
-        background-image: linear-gradient(180deg,rgba(255,255,255,.8), rgba(255,255,255,1));
+        background-image: linear-gradient(180deg,rgba(255,255,255,.5), rgba(255,255,255,.9));
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
         box-shadow: 0 0 30px rgba(0, 0, 0, .1);
@@ -393,15 +482,16 @@ export default {
     }
     #naviArea .nav a {
         display: flex;
-        width: 20%;
+        width: 25%;
         padding: 10px 10px 20px;
         flex-direction: column;
         align-items: center;
+        margin: 0;
     }
-    #board #boardMind .checkBox .boardList div p{
-        width: 85%;
+    #naviArea .nav a.router-link-active {
+        background:linear-gradient(180deg,rgba(0, 193, 230, .5) 10%, rgba(255,255,255,1));
     }
-    #naviArea .nav a.active span,
+    #naviArea .nav a.router-link-active span,
     #naviArea .nav a:hover span {
         color: #095D6D;
     }
@@ -409,8 +499,12 @@ export default {
         background: transparent;
     }
     #naviArea .nav a span{
-        padding-top: 10px;
+        padding-top: 5px;
         font-size: 11px;
+    }
+    #naviArea .nav a i.icon, #naviArea .nav a i.icon::after {
+        width: 20px;
+        height: 20px;
     }
     
 }

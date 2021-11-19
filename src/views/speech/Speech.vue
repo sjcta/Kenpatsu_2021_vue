@@ -182,8 +182,9 @@ export default {
     flex-grow:0;
 }
 
-
-
+#speech .chatWindow {
+    padding: 120px 20px 100px;
+}
 
 
 
@@ -231,6 +232,13 @@ export default {
         background: #222;
         padding: 0 15px;
     }
+    
+    #speech .chatWindow {
+        padding: 20px 20px 100px;
+        height: auto;
+        transition: all 300ms;
+    }
+
 }
 
 </style>

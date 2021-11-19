@@ -2,9 +2,129 @@
     <div class="chatWindow scrollbar--light">
         <div class="chatWindowTitle">
             <h3>28条互动评论</h3>
-            <i class="icon close" @click="showChatWindow=!showChatWindow"></i>
+            <i class="icon close" @click="closeChatWindow"></i>
         </div>
         
+        <dl>
+            <dt>
+                <p>
+                    <img src="@/assets/image/navi/userHead.svg" alt="">
+                </p>
+            </dt>
+            <dd>
+                <div class="title">
+                    <p><span>我  ~1小时前</span><br> 测试一下留言功能是否可用...</p>
+                    <span><i class="icon chatMessage"></i> 3</span>
+                </div>
+                <div class="block">
+                    <p><span class="fontColor">版主:</span> 针对您这个测试，我感觉没问题</p>
+                    <p><span>我:</span> 测试一下留言功能是否可用...</p>
+                    <p><span class="fontColor">版主:</span> 针对您这个测试，我感觉没问题</p>
+                    <p><span>我:</span> 测试一下留言功能是否可用...</p>
+                    
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <p>
+                    <img src="@/assets/image/navi/userHead.svg" alt="">
+                </p>
+            </dt>
+            <dd>
+                <div class="title">
+                    <p><span>我  ~1小时前</span><br> 测试一下留言功能是否可用...</p>
+                    <span><i class="icon chat"></i> 0</span>
+                </div>
+            </dd>
+        </dl>
+
+        <dl>
+            <dt>
+                <p>
+                    <img src="@/assets/image/navi/userHead.svg" alt="">
+                </p>
+            </dt>
+            <dd>
+                <div class="title">
+                    <p><span>我  ~1小时前</span><br> 测试一下留言功能是否可用...</p>
+                    <span><i class="icon chat"></i> 0</span>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <p>
+                    <img src="@/assets/image/navi/userHead.svg" alt="">
+                </p>
+            </dt>
+            <dd>
+                <div class="title">
+                    <p><span>我  ~1小时前</span><br> 测试一下留言功能是否可用...</p>
+                    <span><i class="icon chat"></i> 0</span>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <p>
+                    <img src="@/assets/image/navi/userHead.svg" alt="">
+                </p>
+            </dt>
+            <dd>
+                <div class="title">
+                    <p><span>我  ~1小时前</span><br> 测试一下留言功能是否可用...</p>
+                    <span><i class="icon chatMessage"></i> 3</span>
+                </div>
+                <div class="block">
+                    <p><span class="fontColor">版主:</span> 针对您这个测试，我感觉没问题</p>
+                    <p><span>我:</span> 测试一下留言功能是否可用...</p>
+                    <p><span class="fontColor">版主:</span> 针对您这个测试，我感觉没问题</p>
+                    <p><span>我:</span> 测试一下留言功能是否可用...</p>
+                    
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <p>
+                    <img src="@/assets/image/navi/userHead.svg" alt="">
+                </p>
+            </dt>
+            <dd>
+                <div class="title">
+                    <p><span>我  ~1小时前</span><br> 测试一下留言功能是否可用...</p>
+                    <span><i class="icon chat"></i> 0</span>
+                </div>
+            </dd>
+        </dl>
+
+        <dl>
+            <dt>
+                <p>
+                    <img src="@/assets/image/navi/userHead.svg" alt="">
+                </p>
+            </dt>
+            <dd>
+                <div class="title">
+                    <p><span>我  ~1小时前</span><br> 测试一下留言功能是否可用...</p>
+                    <span><i class="icon chat"></i> 0</span>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <p>
+                    <img src="@/assets/image/navi/userHead.svg" alt="">
+                </p>
+            </dt>
+            <dd>
+                <div class="title">
+                    <p><span>我  ~1小时前</span><br> 测试一下留言功能是否可用...</p>
+                    <span><i class="icon chat"></i> 0</span>
+                </div>
+            </dd>
+        </dl>
         <dl>
             <dt>
                 <p>
@@ -82,7 +202,12 @@ export default {
     data(){
         return{
         }
-    }
+    },
+    methods: {
+        closeChatWindow () {
+            this.$parent.showChatWindow = false;
+        }
+    },
 }
 </script>
 
@@ -105,6 +230,7 @@ export default {
     box-shadow: 0 0 30px rgba(0,0,0,.8);
     /* transition: all 400ms 200ms; */
     transition: all 150ms 100ms;
+    overflow-y: scroll;
 }
 
 .chatWindow.active {
@@ -190,17 +316,17 @@ export default {
     margin: 0;
 }
 
-.chatWindow .chatWindowTitle i{
+.chatWindow .chatWindowTitle i.icon.close {
     position: absolute;
     top: 4px;
     right: 0;
     width: 15px;
     height: 15px;
-    background: url("/assets/image/speech/close.svg") no-repeat;
+    background: url("../assets/image/speech/close.svg") center center no-repeat;
     background-size: 15px 15px;
     cursor: pointer;
 }
-.chatWindow .chatWindowTitle i:hover{
+.chatWindow .chatWindowTitle i.icon.close:hover{
     opacity: .5;
     transition: 200ms;
 }
@@ -208,13 +334,14 @@ export default {
 
 .chatWindow form{
     display: flex;
-    position: absolute;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0 0;
     bottom: 20px;
     left: 15px;
     right: 15px;
+    width: 380px;
 }
 .chatWindow form input{
     border: 0;
@@ -256,6 +383,8 @@ export default {
     .chatWindow.active {
         top: 0;
         transition: top 150ms 50ms;
+        height: 100vh;
+        
     }
 
     .chatWindow.active + .sidebar {
@@ -268,6 +397,7 @@ export default {
         bottom: auto;
         left: auto;
         right: auto;
+        width: auto;
     }
 }
 </style>
