@@ -479,9 +479,11 @@ export default {
         display: flex;
         justify-content: space-around;
         transform: translateZ(0);
+        translate: all 0ms;
         -webkit-overflow-scrolling: touch;
         -webkit-backdrop-filter: blur(15px);
         -webkit-transform: translateZ(0);
+        will-change: transform;
     }
     #naviArea .nav a {
         display: flex;
