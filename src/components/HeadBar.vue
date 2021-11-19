@@ -466,6 +466,7 @@ export default {
 @media screen and (max-width: 720px){
     #naviArea {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        transform: translateY(0px);
     }
     #naviArea .nav{
         display: flex;
@@ -482,8 +483,8 @@ export default {
         backdrop-filter: blur(15px);
         box-shadow: 0 0 30px rgba(0, 0, 0, .1);
         justify-content: space-around;
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
         -webkit-backdrop-filter: blur(15px);
     }
     #naviArea .nav a {
