@@ -473,13 +473,14 @@ export default {
         height: auto;
         min-height: 60px;
         background: #FFF;
-        /* background-image: linear-gradient(180deg,rgba(255,255,255,.5), rgba(255,255,255,.9));
+        background-image: linear-gradient(180deg,rgba(255,255,255,.5), rgba(255,255,255,.9));
         backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px); */
+        -webkit-backdrop-filter: blur(15px);
         box-shadow: 0 0 30px rgba(0, 0, 0, .1);
         display: flex;
         justify-content: space-around;
         min-width: auto;
+        -webkit-overflow-scrolling: touch;
     }
     #naviArea .nav a {
         display: flex;
