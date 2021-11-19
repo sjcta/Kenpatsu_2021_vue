@@ -471,7 +471,7 @@ export default {
         min-width: auto;
         height: auto;
         min-height: 60px;
-        bottom: 0;
+        top: calc(100vh - 60px);
         left: 0;
         background-image: linear-gradient(180deg,rgba(255,255,255,.5), rgba(255,255,255,.9));
         backdrop-filter: blur(15px);

@@ -32,6 +32,7 @@ html,body{
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, "Microsoft YaHei","PingFang","SimSun";
     -webkit-overflow-scrolling: touch;
+    -webkit-font-smoothing: antialiased;
 }
 body * {
     box-sizing: border-box;
