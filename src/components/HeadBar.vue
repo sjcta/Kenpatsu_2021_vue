@@ -31,7 +31,7 @@
 
         <div class="tools">
                 <div class="button comment" @click="showChatWindow" :class="{'close':this.$parent.showChatWindow}"></div>
-                <a href="/board/" class="button return"></a>
+                <router-link to="/board" class="button return"></router-link>
         </div>
     </div>
 </template>

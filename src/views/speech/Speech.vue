@@ -93,12 +93,13 @@ export default {
     },
     watch:{
         showListWindow() {
-           if(this.showListWindow==true) {
+           if(this.showListWindow) {
                this.showChatWindow = false;
            }
         },
         showChatWindow() {
-           if(this.showChatWindow==true) {
+
+           if(this.showChatWindow) {
                this.showListWindow = false;
            }
         }

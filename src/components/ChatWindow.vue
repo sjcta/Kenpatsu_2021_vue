@@ -205,7 +205,7 @@ export default {
     },
     methods: {
         closeChatWindow () {
-            this.$parent.showChatWindow = false;
+            this.$parent.windowSwitcher('chat');
         }
     },
 }
@@ -384,7 +384,7 @@ export default {
         top: 0;
         transition: top 150ms 50ms;
         height: 100vh;
-        
+
     }
 
     .chatWindow.active + .sidebar {
