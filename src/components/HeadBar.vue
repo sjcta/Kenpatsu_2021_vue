@@ -98,7 +98,6 @@ export default {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
     -webkit-overflow-scrolling: touch;
-    will-change: transform;
 }
 #naviArea .nav {
     display: flex;
