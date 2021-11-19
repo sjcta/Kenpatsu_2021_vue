@@ -95,6 +95,10 @@ export default {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
 }
 #naviArea .nav {
     display: flex;
@@ -103,6 +107,10 @@ export default {
     height: 100%;
     width: 60%;
     min-width: 550px;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
 }
 #naviArea .nav a {
     display: inline-flex;
@@ -465,21 +473,21 @@ export default {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     }
     #naviArea .nav{
+        display: flex;
         position: fixed;
         overflow: visible;
         width: 100%;
         min-width: auto;
         height: auto;
         min-height: 60px;
-        top: calc(100vh - 60px);
+        bottom:0;
         left: 0;
         background-image: linear-gradient(180deg,rgba(255,255,255,.5), rgba(255,255,255,.9));
         backdrop-filter: blur(15px);
         box-shadow: 0 0 30px rgba(0, 0, 0, .1);
-        display: flex;
         justify-content: space-around;
         transform: translateZ(0);
-        translate: all 0ms;
+        translate: all 50ms;
         -webkit-overflow-scrolling: touch;
         -webkit-backdrop-filter: blur(15px);
         -webkit-transform: translateZ(0);
