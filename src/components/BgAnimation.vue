@@ -3,16 +3,19 @@
         <div id="particles"></div>
         <div class="mov noisy2">
             <video id="backgroundAnimation" 
-            playsinline loop autoplay muted 
+            muted 
+            loop = "loop" 
             style="object-fit:fill" 
+            autoplay = "autoplay"
+            playsinline="true"
             webkit-playsinline="true"
             x-webkit-airplay="true"
             x5-video-player-type="h5"
             x5-video-orientation="h5"
             x5-video-player-fullscreen="true"
             preload="auto">
-            <source src="@/assets/image/bgImg/bg3.webm" type="video/webm">
-            <source src="@/assets/image/bgImg/bg3.mp4" type="video/mp4">
+            <source src="../assets/image/bgImg/bg3.webm" type="video/webm">
+            <source src="../assets/image/bgImg/bg3.mp4" type="video/mp4">
             </video>
         </div>
     </div>
