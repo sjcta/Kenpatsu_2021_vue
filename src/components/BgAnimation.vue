@@ -106,63 +106,6 @@ export default {
 
 <style scoped>
 
-@keyframes rotate {
-    0%, 100%{
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(360deg);
-    }
-}
-@keyframes poping {
-    0%,50%,100% {
-        zoom: 1
-    } 25% {
-        zoom: 1.2
-    } 75% {
-        zoom: .9
-    }
-}
-@keyframes twinkle {
-    0%, 100%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 1;
-    }
-}
-@keyframes gogo {
-    0%, 20%, 40%, 100%{
-        margin-left: 0;
-    }
-    15%, 35%{
-        margin-left: 5px;
-    }
-
-}
-
-@keyframes transform {
-    0%,
-  100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
-   14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
-   28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
-   42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
-   56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
-   70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
-   84% { border-radius: 66% 54% 50% 30% / 35% 61% 39% 65%; } 
-}
-
-
-@keyframes movement {
-    0%,
-  100% { transform: none; }
-   50% { transform: translateY(20%) rotateY(10deg); }
-}
-@keyframes showUp {
-    0% { width: 100%; transform: translateY(85px); }
-  100% { width: 100%; transform: translateY(0);  }
-}
-
 
 /*****************************************************************
 background animation
