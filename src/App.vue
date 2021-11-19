@@ -21,8 +21,6 @@ export default{
 <style>
 
 #app {
-    height: 100%;
-    overflow: scroll;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -30,7 +28,7 @@ export default{
 html,body{
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, "Microsoft YaHei","PingFang","SimSun";
+    font-family: 'Segoe UI', Tahoma, Verdana, "Microsoft YaHei","PingFang","SimSun";
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased;
 }

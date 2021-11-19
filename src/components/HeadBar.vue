@@ -106,8 +106,6 @@ export default {
     min-width: 550px;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
-    -webkit-overflow-scrolling: touch;
-    will-change: transform;
 }
 #naviArea .nav a {
     display: inline-flex;
@@ -479,16 +477,14 @@ export default {
         min-height: 60px;
         bottom:0;
         left: 0;
+        right:0;
         background-image: linear-gradient(180deg,rgba(255,255,255,.5), rgba(255,255,255,.9));
         backdrop-filter: blur(15px);
         box-shadow: 0 0 30px rgba(0, 0, 0, .1);
         justify-content: space-around;
         transform: translateZ(0);
-        translate: all 50ms;
-        -webkit-overflow-scrolling: touch;
-        -webkit-backdrop-filter: blur(15px);
         -webkit-transform: translateZ(0);
-        will-change: transform;
+        -webkit-backdrop-filter: blur(15px);
     }
     #naviArea .nav a {
         display: flex;
