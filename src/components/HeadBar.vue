@@ -465,22 +465,22 @@ export default {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     }
     #naviArea .nav{
-        width: 100%;
         position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        overflow: visible;
+        width: 100%;
+        min-width: auto;
         height: auto;
         min-height: 60px;
+        bottom: 0;
+        left: 0;
         background-image: linear-gradient(180deg,rgba(255,255,255,.5), rgba(255,255,255,.9));
         backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
         box-shadow: 0 0 30px rgba(0, 0, 0, .1);
         display: flex;
         justify-content: space-around;
-        min-width: auto;
-        -webkit-overflow-scrolling: touch;
         transform: translateZ(0);
+        -webkit-overflow-scrolling: touch;
+        -webkit-backdrop-filter: blur(15px);
         -webkit-transform: translateZ(0);
     }
     #naviArea .nav a {
