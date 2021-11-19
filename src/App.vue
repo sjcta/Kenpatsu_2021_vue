@@ -21,7 +21,10 @@ export default{
 <style>
 
 #app {
+    position: relative;
     -webkit-overflow-scrolling: touch;
+    backface-visibility: hidden;
+    min-height: 100vh;
 }
 
 /* 公共样式 */
