@@ -481,6 +481,8 @@ export default {
         justify-content: space-around;
         min-width: auto;
         -webkit-overflow-scrolling: touch;
+        transform: rotateZ(0);
+        -webkit-transform: rotateZ(0);
     }
     #naviArea .nav a {
         display: flex;
