@@ -83,7 +83,6 @@ export default {
 #naviArea {
     display: block;
     position: fixed;
-    transition: all 150ms;
     top: 0;
     width: 100%;
     height: 50px;
@@ -104,8 +103,6 @@ export default {
     height: 100%;
     width: 60%;
     min-width: 550px;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
 }
 #naviArea .nav a {
     display: inline-flex;
