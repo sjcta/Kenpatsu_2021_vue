@@ -466,7 +466,6 @@ export default {
 @media screen and (max-width: 720px){
     #naviArea {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-        transform: translateY(0px);
     }
     #naviArea .nav{
         display: flex;
