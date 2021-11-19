@@ -95,8 +95,6 @@ export default {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
     -webkit-overflow-scrolling: touch;
 }
 #naviArea .nav {
