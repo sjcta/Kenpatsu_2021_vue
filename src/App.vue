@@ -22,9 +22,7 @@ export default{
 
 #app {
     position: relative;
-    -webkit-overflow-scrolling: touch;
-    backface-visibility: hidden;
-    min-height: 100vh;
+    transform-origin: center top 0px;
 }
 
 /* 公共样式 */
@@ -37,6 +35,17 @@ html,body{
 }
 body * {
     box-sizing: border-box;
+}
+
+#mainArea {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    -webkit-overflow-scrolling: touch;
+    backface-visibility: hidden;
 }
 
 a{

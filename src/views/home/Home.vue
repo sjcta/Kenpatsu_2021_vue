@@ -107,15 +107,6 @@ export default {
 
 
 <style scoped>
-#mainArea {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-}
 
 #mainArea #mainContent {
     display: block;
